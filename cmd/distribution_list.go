@@ -14,6 +14,7 @@ func MakeDistributionList() *cobra.Command {
 		SilenceUsage: false,
 	}
 
+	// Test
 	command.Run = func(cmd *cobra.Command, args []string) {
 		repo.ListDistributions()
 	}
