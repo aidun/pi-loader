@@ -1,7 +1,8 @@
 package cmd
 
 import (
-	"github.com/aidun/pi-loader/pkg/repo"
+	"log"
+	"github.com/aidun/pi-loader/pkg"
 	"github.com/spf13/cobra"
 )
 
@@ -15,7 +16,7 @@ func MakeFlash() *cobra.Command {
 	}
 
 	command.Run = func(cmd *cobra.Command, args []string) {
-		repo.Initialize()
+		log.Println(pkg.Flash())
 	}
 	return command
 }

@@ -20,9 +20,8 @@ func main() {
 	}
 
 	rootCmd.AddCommand(cmd.MakeFlash())
-	rootCmd.AddCommand(cmd.MakeDistribution())
 
-	rootCmd.GenBashCompletion(os.Stdout)
+	//rootCmd.GenBashCompletion(os.Stdout)
 
 	if err := rootCmd.Execute(); err != nil {
 		os.Exit(1)
